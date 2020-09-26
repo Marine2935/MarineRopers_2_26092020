@@ -5,6 +5,8 @@
 
 body {
   font-family: "Raleway", Arial, sans-serif;
+  width: 900px;
+  margin: auto;
 }
 
 a {
@@ -20,7 +22,36 @@ ul {
 /* div filtres */
 
 /* section 1 */
+article,
+aside {
+  background-color: #f2f2f2;
+  border-radius: 8px;
+}
 
 /* section 2 */
 
 /* footer */
+footer {
+  display: flex;
+  background-color: #f2f2f2;
+  padding: 20px 30px 20px 30px;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8em;
+  margin-right: 120px;
+}
+
+footer div h1 {
+  font-size: 1em;
+}
+
+footer div ul {
+  padding-left: 0;
+}
+
+footer div a {
+  color: black;
+}
