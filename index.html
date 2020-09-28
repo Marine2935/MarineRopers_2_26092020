@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.css" />
     <title>
       Reservia - Trouvez votre hébergement pour des vacances de rêves
     </title>
@@ -19,23 +20,41 @@
           <li><a href="#hebergements" class="ancre">Hébergements</a></li>
           <li><a href="#activites" class="ancre">Activités</a></li>
           <li id="inscription"><a href="#">S'inscrire</a></li>
-          <!--Ajouter un id-->
         </ul>
       </nav>
     </header>
     <div id="recherche">
-      <!--Barre de recherche-->
+      <form>
+        <i class="fas fa-map-marker-alt"></i>
+        <input type="search" placeholder="Marseille, France" id="search" />
+        <button>Rechercher</button>
+      </form>
       <div id="filtres">
         <h1>Filtres</h1>
-        <!--Voir si ajout liens-->
         <ul>
-          <li>Économique</li>
-          <li>Familial</li>
-          <li>Romantique</li>
-          <li>Animaux autorisés</li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-money-bill-wave"></i><span>Économique</span></a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-child"></i><span>Familial</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-heart"></i><span>Romantique</span></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-dog"></i><span>Animaux autorisés</span></a
+            >
+          </li>
         </ul>
       </div>
-      <p>Plus de 500 logements sont disponibles dans cette ville</p>
+
+      <p>
+        <i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans
+        cette ville
+      </p>
     </div>
     <section id="hebergements">
       <article>
