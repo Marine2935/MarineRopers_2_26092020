@@ -23,6 +23,12 @@ ul {
   list-style-type: none;
 }
 
+header,
+#recherche,
+section {
+  margin: 0 25px 0 25px;
+}
+
 /* header */
 header {
   display: flex;
@@ -43,7 +49,7 @@ header h1 {
   padding-top: 14px;
 }
 
-header h2 {
+header p {
   font-size: 0.6em;
   font-weight: normal;
 }
@@ -75,7 +81,7 @@ nav .ancre:hover {
   border-top: 1px solid #0065fc;
 }
 
-/* div filtres */
+/* div recherche */
 form {
   margin: 5px 0 20px 0;
   display: flex;
@@ -119,9 +125,10 @@ button {
 }
 
 #filtres,
-#filtres h1 {
+#filtres h3 {
   font-size: 11px;
   font-weight: bold;
+  margin-bottom: 0;
 }
 
 #filtres ul {
@@ -167,10 +174,118 @@ button {
 }
 
 /* section 1 */
+#hebergements {
+  display: flex;
+}
+
 article,
 aside {
   background-color: #f2f2f2;
-  border-radius: 8px;
+  border-radius: 10px;
+}
+
+#hebergements h2 {
+  margin: 0;
+  font-size: 0.9em;
+  padding-bottom: 15px;
+}
+
+.vignette,
+.vignette_pop {
+  background-color: white;
+  padding: 3px;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px rgb(226, 226, 226);
+}
+
+.description {
+  padding-left: 8px;
+}
+
+article {
+  margin-right: 25px;
+  padding: 25px 0 25px 25px;
+  width: 570px;
+}
+
+#ensemble_vignette {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vignette {
+  margin: 0 25px 25px 0;
+}
+
+article img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 3px;
+}
+.nom,
+.prix {
+  color: black;
+  margin: 0;
+}
+
+.nom {
+  font-weight: bold;
+  font-size: 0.7em;
+  padding-bottom: 5px;
+}
+
+.prix {
+  font-size: 0.6em;
+}
+
+#more {
+  font-weight: bold;
+  font-size: 0.7em;
+  margin: 0;
+}
+
+aside {
+  padding: 25px 25px 0 25px;
+}
+
+#pop {
+  display: flex;
+  justify-content: space-between;
+}
+
+aside .vignette_pop {
+  width: 225px;
+  height: 96px;
+  margin-bottom: 25px;
+}
+
+aside img {
+  float: left;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-right: 15px;
+}
+
+aside .description {
+  padding-top: 8px;
+  padding-bottom: 5px;
+  height: 90px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside span {
+  align-self: flex-end;
+}
+
+.blue_star {
+  font-size: 0.5em;
+  color: #0065fc;
+}
+
+.grey_star {
+  font-size: 0.5em;
+  color: #f2f2f2;
 }
 
 /* section 2 */
