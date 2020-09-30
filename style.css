@@ -38,42 +38,35 @@ h2 {
 /* header */
 header {
   display: flex;
+  flex-direction: column;
+}
+
+header img {
+  width: 70px;
+  height: 30px;
+}
+
+#navigation {
+  display: flex;
   justify-content: space-between;
-}
-
-#titre {
-  padding-top: 50px;
-}
-
-#titre img {
-  width: 80px;
-  height: 35px;
-}
-
-header h1 {
-  font-size: 0.9em;
-  padding-top: 14px;
-}
-
-header p {
-  font-size: 0.6em;
-  font-weight: normal;
+  padding-top: 30px;
 }
 
 nav {
-  padding-top: 30px;
+  display: flex;
 }
 
 nav ul {
   display: flex;
 }
 
-nav a {
+#navigation a {
   padding: 30px 20px 0 20px;
-  font-size: 0.8em;
+  font-size: 11px;
 }
 
-.ancre {
+.ancre,
+.ancre2 {
   color: black;
 }
 
@@ -82,9 +75,20 @@ nav a {
   color: #0065fc;
 }
 
-nav .ancre:hover {
+.ancre:hover,
+.ancre2:hover {
   color: #0065fc;
   border-top: 1px solid #0065fc;
+}
+
+header h1 {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+#titre p {
+  font-size: 11px;
+  margin-top: 5px;
 }
 
 /* div recherche */
@@ -97,7 +101,7 @@ form {
   display: flex;
 }
 
-form i {
+.fa-map-marker-alt {
   background-color: #f2f2f2;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
@@ -136,7 +140,7 @@ button {
 
 #filtres,
 #filtres h3 {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: bold;
   margin-bottom: 0;
 }
@@ -150,7 +154,7 @@ button {
   border: 1px solid rgb(209, 209, 209);
   border-left: none;
   border-radius: 16px;
-  margin-right: 15px;
+  margin: 0 15px 15px 0;
 }
 
 #filtres a {
@@ -169,6 +173,11 @@ button {
   padding: 0 12px 0 6px;
 }
 
+#filtres li:hover {
+  background-color: #deebff;
+  border: 1px solid #0065fc;
+}
+
 #recherche .fa-info {
   color: #0065fc;
   font-size: 0.8em;
@@ -180,7 +189,7 @@ button {
 
 #recherche p {
   font-size: 0.6em;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 /* section 1 */
@@ -338,7 +347,7 @@ aside .description {
 footer {
   display: flex;
   background-color: #f2f2f2;
-  padding: 30px 30px 15px 30px;
+  padding: 30px 30px 0 30px;
 }
 
 footer div {
@@ -347,6 +356,7 @@ footer div {
   flex-direction: column;
   font-size: 0.7em;
   margin-right: 120px;
+  padding-bottom: 15px;
 }
 
 footer div h1 {
@@ -364,4 +374,168 @@ footer li {
 
 footer div a {
   color: black;
+}
+
+/* Responsive */
+/* Smartphone */
+
+@media all and (max-device-width: 480px) {
+  body {
+    width: auto;
+  }
+
+  header,
+  #recherche,
+  #activites,
+  section {
+    margin: 0;
+  }
+
+  #titre,
+  #recherche,
+  #activites,
+  footer {
+    padding: 0 20px 0 20px;
+  }
+
+  /* header smartphone */
+
+  header {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  #navigation {
+    padding-top: 0;
+    flex-direction: column;
+  }
+
+  #navigation p {
+    padding: 6px 0 0 20px;
+  }
+
+  #navigation img {
+    position: absolute;
+  }
+
+  nav {
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+    position: relative;
+    top: -30px;
+  }
+
+  #navigation a {
+    padding: 0;
+  }
+
+  #navigation .ancre {
+    padding: 30px 27px 8px 27px;
+  }
+
+  #navigation .ancre2 {
+    padding: 30px 43px 8px 43px;
+  }
+
+  .ancre,
+  .ancre2 {
+    border-bottom: 3px solid rgb(242, 242, 242);
+  }
+
+  .ancre:hover,
+  .ancre2:hover {
+    border-bottom: 3px solid #0065fc;
+    border-top: none;
+  }
+
+  #inscription a {
+    padding-right: 20px;
+  }
+
+  /* div recherche smartphone */
+
+  #grand_ecran {
+    display: none;
+  }
+
+  #smartphone {
+    border-radius: 12px;
+    padding: 10px 11px 10px 11px;
+    position: relative;
+    left: -12px;
+  }
+
+  #filtres {
+    flex-direction: column;
+  }
+
+  #filtres h3 {
+    padding-bottom: 10px;
+    margin: 0;
+  }
+
+  #filtres ul {
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+
+  #filtres li {
+    margin: 0 8px 8px 0;
+  }
+
+  .fa-info {
+    float: left;
+  }
+
+  #recherche p {
+    margin: 10px 0 20px 0;
+  }
+
+  /* section 1 smartphone */
+
+  #hebergements {
+    flex-wrap: wrap-reverse;
+  }
+
+  article {
+    background-color: transparent;
+  }
+
+  #ensemble_vignette {
+    flex-direction: column;
+  }
+
+  aside {
+    border-radius: 0;
+  }
+
+  /* section 2 smartphone */
+
+  #lieux {
+    flex-direction: column;
+  }
+
+  #activites {
+    margin-bottom: 14px;
+  }
+
+  .grande_vignette,
+  .petite_vignette {
+    margin-bottom: 20px;
+  }
+
+  /* footer smartphone */
+
+  footer {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+}
+
+/* Tablette */
+
+@media all and (min-device-width: 481px) {
+  #smartphone {
+    display: none;
+  }
 }

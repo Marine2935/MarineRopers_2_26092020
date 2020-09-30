@@ -2,6 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="fontawesome/css/all.css" />
     <title>
@@ -10,24 +11,33 @@
   </head>
   <body>
     <header>
+      <div id="navigation">
+        <p>
+          <img src="images/logo/Reservia@3x.png" alt="Logo Reservia" />
+        </p>
+        <nav>
+          <ul>
+            <li>
+              <a href="#hebergements" class="ancre">Hébergements</a>
+            </li>
+            <li>
+              <a href="#activites" class="ancre2">Activités</a>
+            </li>
+          </ul>
+          <p id="inscription"><a href="#">S'inscrire</a></p>
+        </nav>
+      </div>
       <div id="titre">
-        <img src="images/logo/Reservia@3x.png" alt="Logo Reservia" />
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre ville ou en pleine nature</p>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#hebergements" class="ancre">Hébergements</a></li>
-          <li><a href="#activites" class="ancre">Activités</a></li>
-          <li id="inscription"><a href="#">S'inscrire</a></li>
-        </ul>
-      </nav>
     </header>
     <div id="recherche">
       <form>
         <i class="fas fa-map-marker-alt"></i>
         <input type="search" placeholder="Marseille, France" id="search" />
-        <button>Rechercher</button>
+        <button id="grand_ecran">Rechercher</button>
+        <button id="smartphone"><i class="fas fa-search"></i></button>
       </form>
       <div id="filtres">
         <h3>Filtres</h3>
