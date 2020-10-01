@@ -220,6 +220,7 @@ article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 2.3;
 }
 
 #ensemble_vignette {
@@ -230,12 +231,14 @@ article {
 
 .vignette {
   margin-bottom: 18px;
+  max-width: 155px;
 }
 
 article img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   margin-bottom: 3px;
+  max-width: 100%;
 }
 
 .nom,
@@ -262,6 +265,7 @@ article img {
 
 aside {
   padding: 27px 23px 0 23px;
+  flex: 1;
 }
 
 #pop {
@@ -269,10 +273,9 @@ aside {
   justify-content: space-between;
 }
 
-aside .vignette_pop {
-  width: 212px;
-  height: 89px;
+.vignette_pop {
   margin-bottom: 20px;
+  height: 90px;
 }
 
 aside img {
@@ -280,6 +283,7 @@ aside img {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   margin-right: 8px;
+  max-height: 100%;
 }
 
 aside .description {
@@ -287,8 +291,8 @@ aside .description {
   padding-bottom: 12px;
   height: 90px;
   display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .star {
@@ -521,15 +525,20 @@ footer div a {
   /* section 1 smartphone */
 
   #hebergements {
-    flex-wrap: wrap-reverse;
+    flex-direction: column-reverse;
   }
 
   article {
     background-color: transparent;
+    margin: 0;
   }
 
   #ensemble_vignette {
     flex-direction: column;
+  }
+
+  .vignette {
+    max-width: 470px;
   }
 
   aside {
