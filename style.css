@@ -13,10 +13,12 @@ body {
   font-family: "Raleway", Arial, sans-serif;
   width: 900px;
   margin: auto;
+  font-size: 0.7em;
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 ul {
@@ -31,8 +33,22 @@ section {
 
 h2 {
   margin: 0;
-  font-size: 0.9em;
+  font-size: 1.3em;
   padding-bottom: 15px;
+}
+
+.star {
+  margin: 0;
+  padding-bottom: 2px;
+  font-size: 0.8em;
+}
+
+.blue_star {
+  color: #0065fc;
+}
+
+.grey_star {
+  color: #f2f2f2;
 }
 
 /* header */
@@ -62,12 +78,6 @@ nav ul {
 
 #navigation a {
   padding: 30px 20px 0 20px;
-  font-size: 0.7em;
-}
-
-.ancre,
-.ancre2 {
-  color: black;
 }
 
 #inscription a {
@@ -82,12 +92,11 @@ nav ul {
 }
 
 header h1 {
-  font-size: 0.9em;
+  font-size: 1.3em;
   margin-top: 5px;
 }
 
 #titre p {
-  font-size: 0.7em;
   margin-top: 5px;
 }
 
@@ -106,7 +115,6 @@ form {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
   padding: 10px 12px 10px 12px;
-  font-size: 0.7em;
 }
 
 #search {
@@ -127,7 +135,7 @@ button {
   color: white;
   background-color: #0065fc;
   font-weight: bold;
-  font-size: 0.7em;
+  font-size: 1em;
   padding: 8px;
   border: none;
   border-top-right-radius: 12px;
@@ -139,7 +147,6 @@ button {
 }
 
 #filtres {
-  font-size: 0.6em;
   font-weight: bold;
   margin-bottom: 0;
 }
@@ -154,10 +161,6 @@ button {
   border-left: none;
   border-radius: 16px;
   margin: 0 15px 15px 0;
-}
-
-#filtres a {
-  color: black;
 }
 
 #filtres i {
@@ -187,7 +190,6 @@ button {
 }
 
 #recherche p {
-  font-size: 0.6em;
   margin-top: 5px;
 }
 
@@ -231,7 +233,7 @@ article {
 
 .vignette {
   margin-bottom: 18px;
-  max-width: 155px;
+  width: 30%;
 }
 
 article img {
@@ -242,25 +244,22 @@ article img {
 }
 
 .nom,
-.prix {
-  color: black;
+.prix,
+#more {
   margin: 0;
 }
 
 .nom {
   font-weight: bold;
-  font-size: 0.7em;
 }
 
 .prix {
-  font-size: 0.6em;
+  font-size: 0.9em;
   padding: 3px 0 3px 0;
 }
 
 #more {
   font-weight: bold;
-  font-size: 0.7em;
-  margin: 0;
 }
 
 aside {
@@ -273,6 +272,10 @@ aside {
   justify-content: space-between;
 }
 
+.fa-chart-line {
+  font-size: 1.2em;
+}
+
 .vignette_pop {
   margin-bottom: 20px;
   height: 90px;
@@ -283,7 +286,7 @@ aside img {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   margin-right: 8px;
-  max-height: 100%;
+  height: 100%;
 }
 
 aside .description {
@@ -293,20 +296,6 @@ aside .description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.star {
-  margin: 0;
-  font-size: 0.5em;
-  padding-bottom: 2px;
-}
-
-.blue_star {
-  color: #0065fc;
-}
-
-.grey_star {
-  color: #f2f2f2;
 }
 
 /* section 2 */
@@ -334,7 +323,6 @@ aside .description {
 .duo {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 #lieux img {
@@ -348,12 +336,10 @@ aside .description {
 }
 
 .nom_lieu {
-  color: black;
   font-weight: bold;
   background-color: white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  font-size: 0.7em;
   padding: 8px 0 10px 10px;
   margin: 0;
   width: 100%;
@@ -385,7 +371,6 @@ footer div {
   width: 160px;
   display: flex;
   flex-direction: column;
-  font-size: 0.7em;
   margin-right: 120px;
   padding-bottom: 15px;
 }
@@ -403,12 +388,8 @@ footer li {
   padding-bottom: 5px;
 }
 
-footer div a {
-  color: black;
-}
-
-/* Responsive */
-/* Smartphone */
+/* ------------------------------------- Responsive ------------------------------------- */
+/*  -- Smartphone -- */
 
 @media all and (max-device-width: 480px) {
   body {
@@ -538,7 +519,7 @@ footer div a {
   }
 
   .vignette {
-    max-width: 470px;
+    width: 100%;
   }
 
   aside {
@@ -572,7 +553,60 @@ footer div a {
   }
 }
 
-/* Tablette */
+/* -- Tablette -- */
+
+@media all and (min-device-width: 481px) and (max-width: 991px) {
+  body {
+    width: auto;
+  }
+
+  #filtres ul {
+    flex-wrap: wrap;
+  }
+
+  /* article tablette */
+
+  article {
+    margin: 20px 0 0 0;
+  }
+
+  #hebergements {
+    flex-direction: column-reverse;
+  }
+
+  .vignette {
+    width: 45%;
+    margin: 0 auto 20px auto;
+  }
+
+  /* aside tablette */
+
+  aside {
+    padding-bottom: 23px;
+  }
+
+  #ensemble_vignette_pop {
+    display: flex;
+  }
+
+  .vignette_pop {
+    width: 30%;
+    height: 70%;
+    margin: auto;
+  }
+
+  aside img {
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+
+  aside .description {
+    height: 80px;
+  }
+}
+
+/* -- Tablette et écran pc -- */
 
 @media all and (min-device-width: 481px) {
   #smartphone {
