@@ -76,7 +76,7 @@ nav ul {
   display: flex;
 }
 
-#navigation a {
+nav a {
   padding: 30px 20px 0 20px;
 }
 
@@ -85,8 +85,7 @@ nav ul {
   color: #0065fc;
 }
 
-.ancre:hover,
-.ancre2:hover {
+.ancre:hover {
   color: #0065fc;
   border-top: 1px solid #0065fc;
 }
@@ -428,35 +427,37 @@ footer li {
 
   #navigation img {
     position: absolute;
+    top: 35px;
   }
 
   nav {
-    flex-wrap: wrap-reverse;
-    justify-content: flex-end;
+    flex-direction: column-reverse;
+    align-items: flex-end;
     position: relative;
-    top: -30px;
   }
 
-  #navigation a {
+  nav ul {
+    width: 100%;
     padding: 0;
   }
 
-  #navigation .ancre {
-    padding: 30px 27px 8px 27px;
+  nav a {
+    padding: 0;
   }
 
-  #navigation .ancre2 {
-    padding: 30px 43px 8px 43px;
-  }
-
-  .ancre,
-  .ancre2 {
+  nav li {
+    flex: 1;
+    text-align: center;
+    padding-bottom: 8px;
     border-bottom: 3px solid rgb(242, 242, 242);
   }
 
-  .ancre:hover,
-  .ancre2:hover {
+  nav li:hover {
     border-bottom: 3px solid #0065fc;
+    padding-bottom: 8px;
+  }
+
+  .ancre:hover {
     border-top: none;
   }
 
@@ -602,7 +603,8 @@ footer li {
   }
 
   aside .description {
-    height: 80px;
+    height: 70px;
+    padding-bottom: 0;
   }
 }
 
