@@ -284,14 +284,14 @@ aside img {
   float: left;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  margin-right: 8px;
+  margin-right: 5px;
   height: 100%;
 }
 
 aside .description {
   padding-top: 8px;
-  padding-bottom: 12px;
-  height: 90px;
+  padding-bottom: 5px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -370,7 +370,7 @@ footer div {
   width: 160px;
   display: flex;
   flex-direction: column;
-  margin-right: 120px;
+  flex: 1;
   padding-bottom: 15px;
 }
 
@@ -576,7 +576,8 @@ footer li {
   }
 
   .vignette {
-    width: 45%;
+    width: 30%;
+    min-width: 180px;
     margin: 0 auto 20px auto;
   }
 
@@ -588,24 +589,65 @@ footer li {
 
   #ensemble_vignette_pop {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .vignette_pop {
+    margin: auto;
     width: 30%;
-    height: 70%;
+    min-width: 200px;
+    height: 100%;
+  }
+
+  .vignette_pop img {
+    width: 40%;
+  }
+
+  /* section 2 tablette */
+
+  #lieux {
+    flex-wrap: wrap;
     margin: auto;
   }
 
-  aside img {
+  #lieux img {
+    min-width: 150px;
     width: 100%;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0;
+    height: 100%;
   }
 
-  aside .description {
-    height: 70px;
-    padding-bottom: 0;
+  .grande_vignette {
+    max-width: 30%;
   }
+
+  .petite_vignette {
+    height: 100%;
+    max-width: 45%;
+    margin: auto;
+  }
+
+  .duo {
+    flex-direction: row;
+    max-width: 66%;
+    flex: 2;
+    margin-bottom: 20px;
+  }
+
+  #port,
+  #calanques {
+    margin: 0 0 20px 0;
+  }
+
+  #fort,
+  #dame {
+    margin: 0;
+  }
+  /*
+Si possibilité d'enlever ses 4 id, mettre cette ligne à la place
+  .grande_vignette,
+  .duo {
+    margin-bottom: 20px;
+  } */
 }
 
 /* -- Tablette et écran pc -- */
