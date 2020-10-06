@@ -11,9 +11,13 @@
 
 body {
   font-family: "Raleway", Arial, sans-serif;
-  width: 900px;
-  margin: auto;
   font-size: 0.7em;
+  max-width: 960px;
+  margin: auto;
+}
+
+.container {
+  margin: 0 30px;
 }
 
 a {
@@ -23,12 +27,6 @@ a {
 
 ul {
   list-style-type: none;
-}
-
-header,
-#recherche,
-section {
-  margin: 0 30px 0 30px;
 }
 
 h2 {
@@ -62,10 +60,11 @@ header img {
   height: 30px;
 }
 
-#navigation {
+.navigation {
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
+  align-items: center;
+  padding-top: 10px;
 }
 
 nav {
@@ -80,7 +79,7 @@ nav a {
   padding: 30px 20px 0 20px;
 }
 
-#inscription a {
+.inscription a {
   font-weight: bold;
   color: #0065fc;
 }
@@ -95,12 +94,12 @@ header h1 {
   margin-top: 5px;
 }
 
-#titre p {
+.titre p {
   margin-top: 5px;
 }
 
 /* div recherche */
-#recherche {
+.recherche {
   margin-bottom: 23px;
 }
 
@@ -116,14 +115,14 @@ form {
   padding: 10px 12px 10px 12px;
 }
 
-#search {
+.search {
   border-right: none;
   border-left: none;
   border-top: 1px solid rgb(242, 242, 242);
   border-bottom: 1px solid rgb(242, 242, 242);
   padding: 7px 0 7px 7px;
 }
-#search::placeholder {
+.search::placeholder {
   font-family: "Raleway", Arial, sans-serif;
   font-weight: bold;
   opacity: 1;
@@ -141,28 +140,29 @@ button {
   border-bottom-right-radius: 12px;
 }
 
-#filtres {
+.filtres {
   display: flex;
 }
 
-#filtres {
+.filtres {
   font-weight: bold;
   margin-bottom: 0;
 }
 
-#filtres ul {
+.filtres ul {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
 }
 
-#filtres li {
+.filtres li {
   border: 1px solid rgb(209, 209, 209);
   border-left: none;
   border-radius: 16px;
   margin: 0 15px 15px 0;
 }
 
-#filtres i {
+.filtres i {
   color: #0065fc;
   background-color: #deebff;
   padding: 8px;
@@ -170,16 +170,16 @@ button {
   font-size: 1.2em;
 }
 
-#filtres span {
+.filtres span {
   padding: 0 12px 0 6px;
 }
 
-#filtres li:hover {
+.filtres li:hover {
   background-color: #deebff;
   border: 1px solid #0065fc;
 }
 
-#recherche .fa-info {
+.recherche .fa-info {
   color: #0065fc;
   font-size: 0.8em;
   border: 1px solid rgb(209, 209, 209);
@@ -188,16 +188,16 @@ button {
   margin-right: 8px;
 }
 
-#recherche p {
+.recherche p {
   margin-top: 5px;
 }
 
 /* section 1 */
-#hebergements {
+.hebergements {
   display: flex;
 }
 
-article,
+.bloc,
 aside {
   background-color: #f2f2f2;
   border-radius: 10px;
@@ -215,7 +215,7 @@ aside {
   padding-left: 8px;
 }
 
-article {
+.bloc {
   margin-right: 23px;
   padding: 27px 23px 27px 23px;
   display: flex;
@@ -224,7 +224,7 @@ article {
   flex: 2.3;
 }
 
-#ensemble_vignette {
+.ensemble_vignette {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -235,16 +235,43 @@ article {
   width: 30%;
 }
 
-article img {
+.bloc img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   margin-bottom: 3px;
   max-width: 100%;
 }
 
+.vignette_img {
+  width: 158px;
+  height: 75px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.cannebière,
+.sport,
+.mouettes {
+  margin: -15px 0;
+}
+
+.mer {
+  margin: -35px 0;
+}
+
+.panier {
+  margin: -7px 0;
+}
+
+.amina {
+  margin: -80px 0;
+}
+
 .nom,
 .prix,
-#more {
+.more {
   margin: 0;
 }
 
@@ -257,16 +284,18 @@ article img {
   padding: 3px 0 3px 0;
 }
 
-#more {
+.more {
   font-weight: bold;
 }
+
+/* Aside */
 
 aside {
   padding: 27px 23px 0 23px;
   flex: 1;
 }
 
-#pop {
+.pop {
   display: flex;
   justify-content: space-between;
 }
@@ -280,12 +309,32 @@ aside {
   height: 90px;
 }
 
-aside img {
+.vignette_pop_img {
+  width: 80px;
+  height: 84px;
+  overflow: hidden;
   float: left;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   margin-right: 5px;
+}
+
+.soleil,
+.eau {
   height: 100%;
+}
+
+.soleil {
+  margin: 0 -25px;
+}
+
+.eau {
+  margin: 0 -15px;
+}
+
+.bleu {
+  width: 100%;
+  margin: -17px 0;
 }
 
 aside .description {
@@ -299,19 +348,23 @@ aside .description {
 
 /* section 2 */
 
-#activites {
-  margin: 37px 30px 37px 30px;
+.activites {
+  margin: 37px 0;
 }
 
-#lieux {
+.lieux {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  margin: -15px;
 }
 
 .grande_vignette,
 .petite_vignette {
   border-radius: 10px;
   box-shadow: 0 3px 3px rgb(226, 226, 226);
+  position: relative;
+  margin: 15px;
 }
 
 .grande_vignette,
@@ -322,16 +375,49 @@ aside .description {
 .duo {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-#lieux img {
+.img_portrait {
+  width: 203px;
+  height: 280px;
+  overflow: hidden;
   border-radius: 10px;
-  max-width: 100%;
 }
 
-.grande_vignette,
-.petite_vignette {
-  position: relative;
+.port,
+.calanques {
+  height: 100%;
+  margin: 0 -105px;
+}
+
+.petite_img {
+  width: 202px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.fort,
+.frioul,
+.dame,
+.parc {
+  width: 100%;
+}
+
+.fort {
+  margin: -78px 0;
+}
+
+.frioul {
+  margin: -15px 0;
+}
+
+.parc {
+  margin: -10px 0;
+}
+
+.dame {
+  margin-bottom: -10px;
 }
 
 .nom_lieu {
@@ -344,19 +430,6 @@ aside .description {
   width: 100%;
   position: absolute;
   bottom: 0;
-}
-
-#port {
-  margin-right: 28px;
-}
-
-#calanques {
-  margin: 0 28px 0 28px;
-}
-
-#fort,
-#dame {
-  margin-bottom: 28px;
 }
 
 /* footer */
@@ -388,6 +461,83 @@ footer li {
 }
 
 /* ------------------------------------- Responsive ------------------------------------- */
+
+/* -- Tablette et écran pc -- */
+
+@media all and (min-device-width: 481px) {
+  .loupe {
+    display: none;
+  }
+}
+
+/* -- Tablette -- */
+
+@media all and (min-device-width: 481px) and (max-width: 991px) {
+  body {
+    width: auto;
+  }
+
+  /* article tablette */
+
+  .bloc {
+    margin: 20px 0 0 0;
+  }
+
+  .hebergements {
+    flex-direction: column-reverse;
+  }
+
+  .vignette {
+    width: 30%;
+    min-width: 180px;
+    margin: 0 auto 20px auto;
+  }
+
+  /* aside tablette */
+
+  aside {
+    padding-bottom: 23px;
+  }
+
+  .ensemble_vignette_pop {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .vignette_pop {
+    margin: auto;
+    width: 30%;
+    min-width: 200px;
+    height: 100%;
+  }
+
+  .vignette_pop img {
+    width: 40%;
+  }
+
+  /* section 2 tablette */
+
+  .grande_vignette {
+    flex: 1;
+  }
+
+  .duo {
+    flex-direction: row;
+    flex: 2;
+  }
+
+  .img_portrait,
+  .petite_img {
+    height: 150px;
+  }
+
+  .port,
+  .calanques {
+    height: unset;
+    margin: -150px 0;
+  }
+}
+
 /*  -- Smartphone -- */
 
 @media all and (max-device-width: 480px) {
@@ -395,16 +545,13 @@ footer li {
     width: auto;
   }
 
-  header,
-  #recherche,
-  #activites,
-  section {
+  .container {
     margin: 0;
   }
 
-  #titre,
-  #recherche,
-  #activites,
+  .titre,
+  .recherche,
+  .activites,
   footer {
     padding: 0 20px 0 20px;
   }
@@ -416,16 +563,17 @@ footer li {
     margin-bottom: 10px;
   }
 
-  #navigation {
+  .navigation {
     padding-top: 0;
     flex-direction: column;
+    align-items: unset;
   }
 
-  #navigation p {
+  .navigation p {
     padding: 6px 0 0 20px;
   }
 
-  #navigation img {
+  .navigation img {
     position: absolute;
     top: 35px;
   }
@@ -461,38 +609,38 @@ footer li {
     border-top: none;
   }
 
-  #inscription a {
+  .inscription a {
     padding-right: 20px;
   }
 
   /* div recherche smartphone */
 
-  #grand_ecran {
+  .rechercher {
     display: none;
   }
 
-  #smartphone {
+  .loupe {
     border-radius: 12px;
     padding: 10px 11px 10px 11px;
     position: relative;
     left: -12px;
   }
 
-  #filtres {
+  .filtres {
     flex-direction: column;
   }
 
-  #filtres h3 {
+  .filtres h3 {
     padding-bottom: 10px;
     margin: 0;
   }
 
-  #filtres ul {
+  .filtres ul {
     flex-wrap: wrap;
     padding-left: 0;
   }
 
-  #filtres li {
+  .filtres li {
     margin: 0 8px 8px 0;
   }
 
@@ -500,22 +648,22 @@ footer li {
     float: left;
   }
 
-  #recherche p {
+  .recherche p {
     margin: 10px 0 20px 0;
   }
 
   /* section 1 smartphone */
 
-  #hebergements {
+  .hebergements {
     flex-direction: column-reverse;
   }
 
-  article {
+  .bloc {
     background-color: transparent;
     margin: 0;
   }
 
-  #ensemble_vignette {
+  .ensemble_vignette {
     flex-direction: column;
   }
 
@@ -529,21 +677,17 @@ footer li {
 
   /* section 2 smartphone */
 
-  #activites {
+  .activites {
     margin-bottom: 14px;
   }
 
-  #lieux {
+  .lieux {
     flex-direction: column;
   }
 
-  .grande_vignette,
-  .petite_vignette,
-  #port,
-  #fort,
-  #calanques,
-  #dame {
-    margin: 0 0 20px 0;
+  .port,
+  .calanques {
+    margin: -150px 0;
   }
 
   /* footer smartphone */
@@ -551,109 +695,5 @@ footer li {
   footer {
     flex-direction: column;
     padding-top: 30px;
-  }
-}
-
-/* -- Tablette -- */
-
-@media all and (min-device-width: 481px) and (max-width: 991px) {
-  body {
-    width: auto;
-  }
-
-  #filtres ul {
-    flex-wrap: wrap;
-  }
-
-  /* article tablette */
-
-  article {
-    margin: 20px 0 0 0;
-  }
-
-  #hebergements {
-    flex-direction: column-reverse;
-  }
-
-  .vignette {
-    width: 30%;
-    min-width: 180px;
-    margin: 0 auto 20px auto;
-  }
-
-  /* aside tablette */
-
-  aside {
-    padding-bottom: 23px;
-  }
-
-  #ensemble_vignette_pop {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .vignette_pop {
-    margin: auto;
-    width: 30%;
-    min-width: 200px;
-    height: 100%;
-  }
-
-  .vignette_pop img {
-    width: 40%;
-  }
-
-  /* section 2 tablette */
-
-  #lieux {
-    flex-wrap: wrap;
-    margin: auto;
-  }
-
-  #lieux img {
-    min-width: 150px;
-    width: 100%;
-    height: 100%;
-  }
-
-  .grande_vignette {
-    max-width: 30%;
-  }
-
-  .petite_vignette {
-    height: 100%;
-    max-width: 45%;
-    margin: auto;
-  }
-
-  .duo {
-    flex-direction: row;
-    max-width: 66%;
-    flex: 2;
-    margin-bottom: 20px;
-  }
-
-  #port,
-  #calanques {
-    margin: 0 0 20px 0;
-  }
-
-  #fort,
-  #dame {
-    margin: 0;
-  }
-  /*
-Si possibilité d'enlever ses 4 id, mettre cette ligne à la place
-  .grande_vignette,
-  .duo {
-    margin-bottom: 20px;
-  } */
-}
-
-/* -- Tablette et écran pc -- */
-
-@media all and (min-device-width: 481px) {
-  #smartphone {
-    display: none;
   }
 }
