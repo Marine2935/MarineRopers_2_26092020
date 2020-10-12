@@ -536,6 +536,7 @@ footer li {
   }
 }
 
+
 @media all and (min-device-width: 481px) and (max-width: 767px) {
   #hebergements {
     flex-direction: column-reverse;
