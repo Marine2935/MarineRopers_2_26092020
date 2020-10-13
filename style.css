@@ -4,8 +4,6 @@
 }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -13,13 +11,13 @@
 
 body {
   font-family: "Raleway", Arial, sans-serif;
-  font-size: 0.7em;
-  max-width: 960px;
-  margin: auto;
+  font-size: 0.8em;
 }
 
 .container {
-  margin: 0 30px;
+  padding: 0 30px;
+  max-width: 990px;
+  margin: auto;
 }
 
 a {
@@ -40,13 +38,14 @@ button,
 .filtres, 
 .nom, 
 .more, 
-.nom_lieu {
+.lieux_nom,
+.tarif {
   font-weight: bold;
 }
 
 .star {
   padding-bottom: 2px;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 .blue {
@@ -128,16 +127,20 @@ form {
   font-family: "Raleway", Arial, sans-serif;
   font-weight: bold;
   opacity: 1;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 button {
   color: white;
   background-color: #0065fc;
-  font-size: 1em;
-  padding: 8px;
+  font-size: 0.9em;
+  padding: 10px;
   border: none;
   border-radius: 0 12px 12px 0;
+}
+
+.btn_loupe {
+  display: none;
 }
 
 .filtres {
@@ -164,17 +167,17 @@ button {
 .filtres i {
   color: #0065fc;
   background-color: #deebff;
-  padding: 8px;
+  padding: 9px;
   border-radius: 16px;
   font-size: 1.2em;
 }
-.filtres .fa-money-bill-wave{
-  font-size: 1.1em;
-  padding: 9px 8px;
+
+.filtres .fa-money-bill-wave {
+  padding: 9px 7px;
 }
 
-.filtres .fa-child{
-  padding: 8px 10px;
+.filtres .fa-child {
+  padding: 9px 10px;
 }
 
 .filtres span {
@@ -183,7 +186,6 @@ button {
 
 .filtres li:hover {
   background-color: #deebff;
-  border: 1px solid #0065fc;
 }
 
 .fa-info {
@@ -210,11 +212,11 @@ aside {
   background-color: #f2f2f2;
   border-radius: 10px;
   margin-top: 20px;  
-  padding: 27px 23px 0 23px;
+  padding: 27px 27px 0 27px;
 }
 
-.vignette,
-.vignette_pop {
+.bloc_vignette,
+.aside_vignette {
   background-color: white;
   padding: 3px;
   border-radius: 10px;
@@ -222,62 +224,69 @@ aside {
 }
 
 .description {
-  padding-left: 8px;
+  padding: 8px 8px 2px 8px;
 }
 
 .bloc {
   margin-right: 23px;
-  padding-bottom: 20px;
+  padding-bottom: 27px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 2.7;
+  flex: 2.4;
 }
 
-.ensemble_vignette {
+.bloc_ensemble_vignette {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.vignette {
+.bloc_vignette {
   margin-bottom: 18px;
-  width: 30%;
+  width: 31%;
+  min-width: 170px;
 }
 
-.bloc img {
-  max-width: 100%;
-}
-
-.vignette_img {
+.bloc_vignette_img {
   width: 100%;
-  height: 75px;
-  overflow: hidden;
+  height: 85px;
   border-radius: 10px 10px 0 0;
-  margin-bottom: 5px;
 }
 
-.cannebière,
-.sport,
-.mouettes {
-  margin: -18px 0;
+.bloc_img_1 {
+  background: url('images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg') center;  
+  background-size: cover;
 }
 
-.mer {
-  margin: -40px 0;
+.bloc_img_2 {
+  background: url('images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg') center;  
+  background-size: cover;
 }
 
-.panier {
-  margin: -10px 0;
+.bloc_img_3 {
+  background: url('images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg') center;  
+  background-size: cover;
 }
 
-.amina {
-  margin: -85px 0;
+.bloc_img_4 {
+  background: url('images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg') center;  
+  background-size: cover;
+}
+
+.bloc_img_5 {
+  background: url('images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg') center;  
+  background-size: cover;
+}
+
+.bloc_img_6 {
+  background: url('images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg') center;  
+  background-size: cover;
 }
 
 .prix {
-  font-size: 0.9em;
-  padding: 4px 0;
+  font-size: 0.89em;
+  padding: 6px 0;
 }
 
 /* Aside */
@@ -293,45 +302,42 @@ aside {
   font-size: 1.4em;
 }
 
-.vignette_pop {
+.aside_vignette {
   margin-bottom: 20px;
-  height: 90px;
+  display: flex;
+  height: 110px;
 }
 
-.vignette_pop_img {
-  width: 80px;
+.aside_vignette_img {
   height: 100%;
-  overflow: hidden;
-  float: left;
+  width: 90px;
   border-radius: 10px 0 0 10px;
-  margin-right: 5px;
 }
 
-.soleil {
-  height: 100%;
-  margin: 0 -25px;
+.aside_img_1 {
+  background: url('images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg') center;  
+  background-size: cover;
 }
 
-.eau {
-  height: 100%;
-  margin: 0 -15px;
+.aside_img_2 {
+  background: url('images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg') center;  
+  background-size: cover;
 }
 
-.bleu {
-  width: 100%;
-  margin: -17px 0;
+.aside_img_3 {
+  background: url('images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg') center;  
+  background-size: cover;
 }
 
 aside .description {
-  padding: 5px 8px;
-  height: 100%;
+  padding: 8px 15px 5px 15px;
+  width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 /* section 2 */
-
 #activites {
   margin: 37px 0;
 }
@@ -340,89 +346,87 @@ aside .description {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: -15px;
 }
 
-.grande_vignette,
-.grande_vignette_2,
-.petite_vignette {
+.lieux_vignette,
+.lieux_petite_vignette {  
   border-radius: 10px;
   box-shadow: 0 3px 3px rgb(226, 226, 226);
-  position: relative;
-  margin: 15px;
 }
 
-.grande_vignette,
-.grande_vignette_2,
-.duo {
-  flex: 1;
+.lieux_vignette,
+.lieux_duo_vignette {
+  height: 300px;
+  width: 23%;
 }
 
-.duo {
+.lieux_grande_vignette,
+.lieux_petite_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.lieux_petite_vignette {
+  height: 135px;
+}
+
+.lieux_duo_vignette {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.img_portrait {
-  width: 203px;
-  height: 280px;
-  overflow: hidden;
-  border-radius: 10px;
+.lieux_img_1 {
+  background: url('images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg') center;
+  background-size: cover;
 }
 
-.port,
-.calanques {
-  height: 100%;
-  margin: 0 -105px;
+.lieux_img_2 {
+  background: url('images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg') center;
+  background-size: cover;
 }
 
-.petite_img {
-  width: 202px;
-  overflow: hidden;
-  border-radius: 10px;
+.lieux_img_3 {
+  background: url('images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg') center;
+  background-size: cover;
 }
 
-.fort,
-.frioul,
-.dame,
-.parc {
-  width: 100%;
+.lieux_img_4 {
+  background: url('images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg') center;
+  background-size: cover;
 }
 
-.fort {
-  margin: -78px 0;
+.lieux_img_5 {
+  background: url('images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg') center;
+  background-size: cover;
 }
 
-.frioul {
-  margin: -15px 0;
+.lieux_img_6 {
+  background: url('images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg') center;
+  background-size: cover;
 }
 
-.parc {
-  margin: -10px 0;
-}
-
-.dame {
-  margin-bottom: -10px;
-}
-
-.nom_lieu {
+.lieux_nom {
   background-color: white;
   border-radius: 0 0 10px 10px;
   padding: 10px;
   width: 100%;
-  position: absolute;
-  bottom: 0;
 }
 
 /* footer */
 footer {
-  display: flex;
   background-color: #f2f2f2;
   padding: 30px 30px 0 30px;
 }
 
-footer div {
+footer .container {
+  display: flex;
+}
+
+.footer_rubrique {
   width: 160px;
   display: flex;
   flex-direction: column;
@@ -430,199 +434,94 @@ footer div {
   padding-bottom: 15px;
 }
 
-footer div h1 {
+footer h2 {
   font-size: 1em;
-  margin-bottom: 15px;
 }
 
 footer li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 /* ------------------------------------- Responsive ------------------------------------- */
 
 /* -- Tablette et écran pc -- */
 
-@media all and (min-device-width: 481px) {
-  .loupe {
-    display: none;
-  }
-}
-
-/* -- Tablette -- */
-
-@media all and (min-device-width: 481px) and (max-width: 991px) {
-  body {
-    width: auto;
+@media all and (max-width: 940px) {
+   .container {
+    padding: 0;
   }
 
-  /* article tablette */
-  .vignette {
-    width: 200px;
-    margin: 0 auto 20px auto;
+  .titre,
+  .recherche,
+  .bloc,
+  #activites {
+    padding: 0 20px;
   }
 
-  /* section 2 tablette */
-
-  .grande_vignette,
-  .grande_vignette_2,
-  .duo {
-    max-width: 23%;
+  .navigation img {
+    margin: 0 20px;
   }
-
-  .grande_vignette,
-  .grande_vignette_2,
-  .petite_vignette {
-    margin: 10px;
-  }
-
-  .img_portrait,
-  .petite_img {
-    max-width: 100%;
-    width: unset;
-  }
-
-  .fort {
-    margin: -60px 0;
-  }
-
-  .frioul {
-    margin: -10px 0;
-  }
-
-  .dame,
-  .parc {
-    margin: 0;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 991px) {
-  .vignette_img {
-    height: 100px;
-  }  
-  
-  .ensemble_vignette_pop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .vignette_pop {
-    height: 168px;
-    width: 150px;
-  }
-
-  .vignette_pop_img {
-    float: unset;
-    width: 100%;
-    height: 90px;
-    border-radius: 10px 10px 0 0;
-  }
-
-  .soleil,
-  .eau {
-    width: 100%;
-    height: unset;
-    margin: -10px 0;
-  }
-
-  .bleu {
-    width: 100%;
-    margin: -85px 0;
-  }
-
-  aside .description {
-    height: 70px;
-    padding-bottom: 0;
-  }
-}
-
-
-
-@media all and (min-device-width: 481px) and (max-width: 767px) {
+ 
   #hebergements {
     flex-direction: column-reverse;
   }
 
   .bloc {
+    background-color: unset;
     margin: 0;
   }
 
-  .vignette {
-    width: 175px;
+  .bloc_vignette_img {
+    height: 100px;
+  }
+  
+  aside {
+    border-radius: 0;
+    margin-bottom: 30px;
   }
 
-  /* aside tablette */
+  .aside_vignette_img {
+    width: 100px;
+  }
+  
+  #activites {
+    margin-bottom: 10px;
+  }
 
-  aside {
+  .lieux {    
+    margin: unset;
+  }
+
+  .lieux_vignette,
+  .lieux_duo_vignette {
+    height: 200px;
+  }
+
+  .lieux_vignette,
+  .lieux_petite_vignette { 
+    margin: 0;  
     margin-bottom: 20px;
   }
 
-  /* Section 2 */
-
-  .grande_vignette,
-  .grande_vignette_2,
-  .petite_vignette {
-    min-width: 133px;
-    max-width: 229px;
-    max-height: 180px;
-    min-height: 110px;
-    flex: 1;
+  .lieux_vignette {
+    width: 29%;
   }
 
-  .duo {
+  .lieux_duo_vignette {
+    width: 66%;
     flex-direction: row;
-    min-width: 296px;
-    max-width: 490px;
-    flex: 2.2;
+    justify-content: space-between;
   }
 
-  .grande_vignette_2 {
-    order: 1;
-  }
-
-  .img_portrait,
-  .petite_img, 
-  .frioul,
-  .dame,
-  .parc {
+  .lieux_petite_vignette {
+    width: 46%;   
     height: 100%;
-  }
-
-  .port,
-  .calanques {
-    width: 100%;
-    margin: 0;
-  }
-
-  .port, 
-  .parc {
-    margin: -15px 0;
-  }
-
-  .fort {
-    margin: -80px 0;
-  }
-
-  .frioul {
-    margin: -30px 0;
   }
 }
 
 /* -- Smartphone -- */
-@media all and (max-device-width: 480px) {
-
-  .container {
-    margin: 0;
-  }
-
-  .titre,
-  .recherche,
-  #activites,
-  footer {
-    padding: 0 20px;
-  }
-
-  /* header smartphone */
+@media all and (max-width: 480px) {
+ /* header smartphone */
 
   header {
     flex-direction: column;
@@ -674,11 +573,12 @@ footer li {
 
   /* div recherche smartphone */
 
-  .rechercher {
+  .btn_search {
     display: none;
   }
 
-  .loupe {
+  .btn_loupe {
+    display: unset;
     border-radius: 12px;
     padding: 10px 11px;
     position: relative;
@@ -689,99 +589,44 @@ footer li {
     flex-direction: column;
   }
 
-  /* section 1 smartphone */
-
-  #hebergements {
-    flex-direction: column-reverse;
-  }
-
-  .bloc {
-    background-color: unset;
-    margin: 0;
-  }
-
-  .ensemble_vignette {
+  .bloc_ensemble_vignette {
     flex-direction: column;
     align-items: center;
   }
 
-  .vignette {
+  .bloc_vignette {
     width: 100%;
-    max-width: 350px;
   }
 
-  .vignette_img {
-    width: 100%;
-    height: 100%;
-    max-height: 160px;
-  }
-
-  .cannebière,
-  .sport,
-  .mouettes {
-    margin: -40px 0;
-  }
-
-  .mer {
-    margin: -80px 0;
-  }
-
-  .amina {
-    width: 100%;
-    height: 100%;
-    margin: -180px 0;
-  }
-
-  /* aside smartphone */
-
-  aside {
-    border-radius: 0;
-  }
-
-  /* section 2 smartphone */
-
-  #activites {
-    margin: 10px 0 30px 0;
+  .bloc_vignette_img {
+    height: 150px;
   }
 
   .lieux {
     flex-direction: column;
-    align-items: center;
   }
 
-  .img_portrait,
-  .petite_img {
-    width: unset;
-    height: unset;
-    min-height: 100px;
-    max-height: 200px;
-    min-width: 100px;
-    max-width: 350px;
-  }
-
-  .port,
-  .calanques,
-  .fort,
-  .frioul,
-  .dame,
-  .parc {
+  .lieux_vignette,
+  .lieux_duo_vignette {   
     height: unset;
     width: 100%;
-    margin: 0;
   }
 
-  .fort {
-    margin: -130px 0;
+  .lieux_vignette,
+  .lieux_petite_vignette { 
+    height: 200px;    
   }
 
-  .parc {
-    margin: -20px 0;
+  .lieux_grande_vignette,
+  .lieux_petite_vignette {
+    width: 100%;
   }
 
-  /* footer smartphone */
-
-  footer {
+  .lieux_duo_vignette {
     flex-direction: column;
-    padding-top: 30px;
+  }
+
+  footer .container {
+    flex-direction: column;
   }
 }
