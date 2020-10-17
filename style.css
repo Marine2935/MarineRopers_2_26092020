@@ -158,10 +158,14 @@ button {
 }
 
 .filtres li {
+  margin: 5px;
+}
+
+.filtres a {
+  display: inline-block;  
   border: 1px solid rgb(209, 209, 209);
   border-left: none;
   border-radius: 16px;
-  margin: 5px;
 }
 
 .filtres i {
@@ -184,8 +188,11 @@ button {
   padding: 0 12px 0 6px;
 }
 
-.filtres li:hover {
+.filtres a:hover {
+  color: #0065fc;
   background-color: #deebff;
+  border: 1px solid #0065fc;
+  margin-left: -1px;
 }
 
 .fa-info {
@@ -286,7 +293,7 @@ aside {
 
 .prix {
   font-size: 0.89em;
-  padding: 6px 0;
+  padding: 4px 0 5px 0;
 }
 
 /* Aside */
@@ -330,7 +337,7 @@ aside {
 }
 
 aside .description {
-  padding: 8px 15px 5px 15px;
+  padding: 8px 0 5px 15px;
   width: 65%;
   display: flex;
   flex-direction: column;
@@ -339,7 +346,7 @@ aside .description {
 
 /* section 2 */
 #activites {
-  margin: 37px 0;
+  margin: 40px 0;
 }
 
 .lieux {
@@ -370,7 +377,15 @@ aside .description {
 }
 
 .lieux_petite_vignette {
-  height: 135px;
+  height: 45%;
+}
+
+.lieux_petite_vig_1 {
+  height: 54%;
+}
+
+.lieux_petite_vig_2 {
+  height: 36%;
 }
 
 .lieux_duo_vignette {
@@ -419,7 +434,7 @@ aside .description {
 /* footer */
 footer {
   background-color: #f2f2f2;
-  padding: 30px 30px 0 30px;
+  padding-top: 30px;
 }
 
 footer .container {
@@ -427,11 +442,11 @@ footer .container {
 }
 
 .footer_rubrique {
-  width: 160px;
   display: flex;
   flex-direction: column;
   flex: 1;
   padding-bottom: 15px;
+  margin-right: 20px;
 }
 
 footer h2 {
@@ -445,21 +460,9 @@ footer li {
 /* ------------------------------------- Responsive ------------------------------------- */
 
 /* -- Tablette et écran pc -- */
-
 @media all and (max-width: 940px) {
    .container {
-    padding: 0;
-  }
-
-  .titre,
-  .recherche,
-  .bloc,
-  #activites {
     padding: 0 20px;
-  }
-
-  .navigation img {
-    margin: 0 20px;
   }
  
   #hebergements {
@@ -469,6 +472,7 @@ footer li {
   .bloc {
     background-color: unset;
     margin: 0;
+    padding: 10px 0;
   }
 
   .bloc_vignette_img {
@@ -477,7 +481,8 @@ footer li {
   
   aside {
     border-radius: 0;
-    margin-bottom: 30px;
+    margin: 20px -20px;
+    padding: 20px 20px 0 20px;
   }
 
   .aside_vignette_img {
@@ -485,7 +490,7 @@ footer li {
   }
   
   #activites {
-    margin-bottom: 10px;
+    margin: 20px 0;
   }
 
   .lieux {    
@@ -521,7 +526,6 @@ footer li {
 
 /* -- Smartphone -- */
 @media all and (max-width: 480px) {
- /* header smartphone */
 
   header {
     flex-direction: column;
@@ -531,10 +535,11 @@ footer li {
     padding-top: 0;
     flex-direction: column;
     align-items: unset;
+    margin: 0 -20px;
   }
 
   .navigation p {
-    padding: 6px 0 0 20px;
+    padding-left: 20px;
   }
 
   .navigation img {
@@ -567,11 +572,9 @@ footer li {
     border-top: none;
   }
 
-  .inscription a {
-    padding-right: 20px;
+  .inscription {
+    margin-top: 15px;
   }
-
-  /* div recherche smartphone */
 
   .btn_search {
     display: none;
