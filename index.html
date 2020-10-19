@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="fontawesome/css/all.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <title>Reservia - Trouvez votre hébergement pour des vacances de rêves</title>
 </head>
 
@@ -14,7 +14,7 @@
     <header>
       <div class="navigation">
         <p>
-          <img src="images/logo/Reservia.svg" alt="Logo Reservia" />
+          <img src="images/Reservia.svg" alt="Logo Reservia" />
         </p>
         <nav>
           <ul>
@@ -37,31 +37,22 @@
       <form>
         <i class="fas fa-map-marker-alt"></i>
         <input type="search" placeholder="Marseille, France" class="search" />
-        <button class="btn_search">Rechercher</button>
-        <button class="btn_loupe"><i class="fas fa-search"></i></button>
+        <button class="btn btn_search">Rechercher</button>
+        <button class="btn btn_loupe"><i class="fas fa-search"></i></button>
       </form>
       <div class="filtres">
-        <h3>Filtres</h3>
-        <ul>
-          <li>
-            <a href="#"><i class="fas fa-money-bill-wave"></i><span>Économique</span></a>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-child"></i><span>Familial</span></a>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-heart"></i><span>Romantique</span></a>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-dog"></i><span>Animaux autorisés</span></a>
-          </li>
-        </ul>
+        <h2>Filtres</h2>
+        <div>
+          <button class="filtres_btn"><i class="fas fa-money-bill-wave"></i><span>Économique</span></button>
+          <button class="filtres_btn"><i class="fas fa-child"></i><span>Familial</span></button>
+          <button class="filtres_btn"><i class="fas fa-heart"></i><span>Romantique</span></button>
+          <button class="filtres_btn"><i class="fas fa-dog"></i><span>Animaux autorisés</span></button>
+        </div>
       </div>
       <p><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
     </div>
     <section id="hebergements">
-      <div class="bloc">
-        <div>          
+      <div class="bloc">       
           <h2>Hébergements à Marseille</h2>
           <div class="bloc_ensemble_vignette">
             <div class="bloc_vignette">
@@ -167,7 +158,6 @@
               </a>
             </div>
           </div>
-        </div>
         <p class="more"><a href="#">Afficher plus</a></p>
       </div>
       <aside>
@@ -290,28 +280,28 @@
   </div>
   <footer>
     <div class="container">
-    <div class="footer_rubrique">
-      <h2>À propos</h2>
-      <ul>
-        <li><a href="#">Fonctionnement du site</a></li>
-        <li><a href="#">Conditions générales de vente</a></li>
-        <li><a href="#">Données et confidentialité</a></li>
-      </ul>
-    </div>
-    <div class="footer_rubrique">
-      <h2>Nos hébergements</h2>
-      <ul>
-        <li><a href="#">Charte qualité</a></li>
-        <li><a href="#">Soumettre votre hôtel</a></li>
-      </ul>
-    </div>
-    <div class="footer_rubrique">
-      <h2>Assistance</h2>
-      <ul>
-        <li><a href="#">Centre d'aide</a></li>
-        <li><a href="#">Nous contacter</a></li>
-      </ul>
-    </div>
+      <div class="footer_rubrique">
+        <h2>À propos</h2>
+        <ul>
+          <li><a href="#">Fonctionnement du site</a></li>
+          <li><a href="#">Conditions générales de vente</a></li>
+          <li><a href="#">Données et confidentialité</a></li>
+        </ul>
+      </div>
+      <div class="footer_rubrique">
+        <h2>Nos hébergements</h2>
+        <ul>
+          <li><a href="#">Charte qualité</a></li>
+          <li><a href="#">Soumettre votre hôtel</a></li>
+        </ul>
+      </div>
+      <div class="footer_rubrique">
+        <h2>Assistance</h2>
+        <ul>
+          <li><a href="#">Centre d'aide</a></li>
+          <li><a href="#">Nous contacter</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 </body>

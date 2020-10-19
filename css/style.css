@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Raleway";
-  src: url("font/Raleway-VariableFont_wght.ttf");
+  src: url("../font/Raleway-VariableFont_wght.ttf");
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 0;  
+  font-family: "Raleway", Arial, sans-serif;
 }
 
 body {
-  font-family: "Raleway", Arial, sans-serif;
   font-size: 0.8em;
 }
 
@@ -29,7 +29,7 @@ ul {
   list-style: none;
 }
 
-h2 {
+section h2, footer h2 {
   font-size: 1.3em;
   padding-bottom: 15px;
 }
@@ -46,6 +46,7 @@ button,
 .star {
   padding-bottom: 2px;
   font-size: 0.7em;
+  display: flex;
 }
 
 .blue {
@@ -60,7 +61,7 @@ button,
 header {
   display: flex;
   flex-direction: column;
-  padding: 11px 0;
+  padding: 10px 0;
 }
 
 header img {
@@ -71,7 +72,7 @@ header img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 9px;
 }
 
 nav, nav ul {
@@ -89,7 +90,7 @@ nav a {
 
 .ancre:hover {
   color: #0065fc;
-  border-top: 1px solid #0065fc;
+  border-top: 2px solid #0065fc;
 }
 
 .titre {
@@ -130,7 +131,7 @@ form {
   font-size: 0.9em;
 }
 
-button {
+.btn {
   color: white;
   background-color: #0065fc;
   font-size: 0.9em;
@@ -145,27 +146,24 @@ button {
 
 .filtres {
   display: flex;
-  margin: 20px 0;
-}
-
-.filtres h3 {
-  margin: 12px 15px 10px 0;
-}
-
-.filtres ul {
-  display: flex;
   flex-wrap: wrap;
+  margin: 20px 0 10px 0;
 }
 
-.filtres li {
-  margin: 5px;
+.filtres h2 {
+  font-size: 1em;
+  margin-right: 15px;
+  padding: 8px 0;
 }
 
-.filtres a {
-  display: inline-block;  
+.filtres_btn { 
   border: 1px solid rgb(209, 209, 209);
   border-left: none;
   border-radius: 16px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background: none;
+  font-size: 0.9em;
 }
 
 .filtres i {
@@ -188,7 +186,7 @@ button {
   padding: 0 12px 0 6px;
 }
 
-.filtres a:hover {
+.filtres_btn:hover {
   color: #0065fc;
   background-color: #deebff;
   border: 1px solid #0065fc;
@@ -262,32 +260,32 @@ aside {
 }
 
 .bloc_img_1 {
-  background: url('images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg') center;  
+  background: url('../images/hebergements/auberge_cannebiere.jpg') center;  
   background-size: cover;
 }
 
 .bloc_img_2 {
-  background: url('images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg') center;  
+  background: url('../images/hebergements/hotel_sport.jpg') center;  
   background-size: cover;
 }
 
 .bloc_img_3 {
-  background: url('images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg') center;  
+  background: url('../images/hebergements/hotel_mouettes.jpg') center;  
   background-size: cover;
 }
 
 .bloc_img_4 {
-  background: url('images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg') center;  
+  background: url('../images/hebergements/hotel_mer.jpg') center;  
   background-size: cover;
 }
 
 .bloc_img_5 {
-  background: url('images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg') center;  
+  background: url('../images/hebergements/auberge_panier.jpg') center;  
   background-size: cover;
 }
 
 .bloc_img_6 {
-  background: url('images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg') center;  
+  background: url('../images/hebergements/hotel_amina.jpg') center;  
   background-size: cover;
 }
 
@@ -322,17 +320,17 @@ aside {
 }
 
 .aside_img_1 {
-  background: url('images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg') center;  
+  background: url('../images/hebergements/hotel_soleil.jpg') center;  
   background-size: cover;
 }
 
 .aside_img_2 {
-  background: url('images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg') center;  
+  background: url('../images/hebergements/chambres_eau.jpg') center;  
   background-size: cover;
 }
 
 .aside_img_3 {
-  background: url('images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg') center;  
+  background: url('../images/hebergements/hotel_bleu_blanc.jpg') center;  
   background-size: cover;
 }
 
@@ -395,32 +393,32 @@ aside .description {
 }
 
 .lieux_img_1 {
-  background: url('images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg') center;
+  background: url('../images/activites/vieux_port.jpg') center;
   background-size: cover;
 }
 
 .lieux_img_2 {
-  background: url('images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg') center;
+  background: url('../images/activites/fort_pomegues.jpg') center;
   background-size: cover;
 }
 
 .lieux_img_3 {
-  background: url('images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg') center;
+  background: url('../images/activites/iles_frioul.jpg') center;
   background-size: cover;
 }
 
 .lieux_img_4 {
-  background: url('images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg') center;
+  background: url('../images/activites/calanques.jpg') center;
   background-size: cover;
 }
 
 .lieux_img_5 {
-  background: url('images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg') center;
+  background: url('../images/activites/notre_dame_garde.jpg') center;
   background-size: cover;
 }
 
 .lieux_img_6 {
-  background: url('images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg') center;
+  background: url('../images/activites/longchamps.jpg') center;
   background-size: cover;
 }
 
@@ -484,7 +482,7 @@ footer li {
     margin: 20px -20px;
     padding: 20px 20px 0 20px;
   }
-
+  
   .aside_vignette_img {
     width: 100px;
   }
@@ -576,6 +574,10 @@ footer li {
     margin-top: 15px;
   }
 
+  .search {
+    width: 100%;
+  }
+
   .btn_search {
     display: none;
   }
@@ -583,13 +585,9 @@ footer li {
   .btn_loupe {
     display: unset;
     border-radius: 12px;
-    padding: 10px 11px;
+    padding: 10px 12px;
     position: relative;
     left: -12px;
-  }
-
-  .filtres {
-    flex-direction: column;
   }
 
   .bloc_ensemble_vignette {
