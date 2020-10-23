@@ -265,7 +265,7 @@ aside {
 }
 
 .bloc_img_2 {
-  background: url('../images/hebergements/hotel_sport.jpg') center;  
+  background: url('../images/hebergements/hotel_port.jpg') center;  
   background-size: cover;
 }
 
@@ -483,8 +483,32 @@ footer li {
     padding: 20px 20px 0 20px;
   }
   
+  .aside_ensemble_vignette {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .aside_ensemble_vignette a {
+    width: 31%;
+  }
+
+  .aside_vignette {
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+  }
+
   .aside_vignette_img {
-    width: 100px;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 55%;
+  }
+
+  aside .description {
+    width: 100%;
+    height: 45%;
+    padding: 8px;
+    padding-bottom: 2px;
   }
   
   #activites {
@@ -601,6 +625,32 @@ footer li {
 
   .bloc_vignette_img {
     height: 150px;
+  }
+
+  .aside_ensemble_vignette {
+    flex-direction: column;
+  }
+  
+  .aside_ensemble_vignette a {
+    width: 100%;
+  }
+
+  .aside_vignette {
+    width: 100%;
+    height: 110px;
+    flex-direction: row;
+  }
+
+  .aside_vignette_img {
+    height: 100%;
+    width: 100px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  aside .description {
+    padding: 8px 0 5px 15px;
+    width: 65%;
+    height: 100%;
   }
 
   .lieux {
